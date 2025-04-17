@@ -64,6 +64,14 @@ The primary objective is to automate welding tasks by:
 - Convert symbolic dynamics to C for embedded control
 - Add ROS/Gazebo support for hardware-in-the-loop testing
 - Create a Digital Twin for real-time feedback and diagnostics
+  
+---
+
+## ✍️ Author
+
+**Sannjay Balaji**  
+Master of Engineering (Robotics & Control)  
+Western University
 
 ---
 
