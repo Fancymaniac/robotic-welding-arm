@@ -1,63 +1,75 @@
-Robotic Welding Arm Simulation
+# 🤖 Robotic Welding Arm Simulation
 
-This project simulates a 6-DOF robotic welding manipulator for motorcycle headstock manufacturing using MATLAB-based modeling and control strategies. The manipulator is designed to follow a weld sequence across defined points within a constrained 3D workspace. The project is structured in four phases, aligning with ECE 9053A coursework at Western University.
+This repository presents a comprehensive simulation of a **6-DOF robotic manipulator** for motorcycle headstock welding. Developed using MATLAB and Simulink, the robot is designed to follow a weld path within a constrained workspace, navigating through obstacles while ensuring smooth joint trajectories.
 
-Project Scope
+> 📚 Course: ECE 9053A – Robotics and Control  
+> 🏫 Institution: Western University  
+> 🛠️ Tools: MATLAB, Simulink, Optimization Toolbox
 
-The goal is to automate welding operations by modeling the robot's forward and inverse kinematics, implementing obstacle-aware path planning, and applying a dynamic control system for smooth trajectory execution.
+---
 
-Application: MIG welding of motorcycle headstock frame
+## 📌 Project Scope
 
-Robot Type: 6-DOF articulated arm with 5 revolute joints
+The primary objective is to automate welding tasks by:
 
-Workspace: 2.75m x 2.25m x 0.1m (X, Y, Z)
+- Modeling **forward and inverse kinematics** of a 6-DOF articulated arm
+- Implementing **potential field-based path planning**
+- Simulating **dynamic control** using the Euler-Lagrange formulation
+- Generating optimized joint torque profiles for real-time execution
 
-Tools: MATLAB, Simulink, Optimization Toolbox
+### ✳️ Application
 
-Repository Structure
+- **Task**: MIG welding of motorcycle headstock frame  
+- **Robot Configuration**: 6-DOF articulated robot with 5 revolute joints  
+- **Workspace Dimensions**: 2.75m × 2.25m × 0.1m (X, Y, Z)
 
-Problem_Statements/ – Original task descriptions from Step 1 to Step 4
+---
 
-Implementation/ – Phase-wise project submissions and results
+## 🗂️ Repository Structure
 
-MATLAB/ – Code files for all modeling, planning, and control tasks
+| Folder | Description |
+|--------|-------------|
+| `Problem_Statements/` | Project instructions from Step 1 to Step 4 |
+| `Implementation/` | Phase-wise submissions with plots and discussion |
+| `MATLAB/` | All MATLAB code for kinematics, dynamics, and control |
+| `Cad model/` | STEP/STL geometry for workspace and robot |
+| `Project_Report.pdf` | Final report summarizing methodology and results |
+| `README.md` | This file |
 
-Cad model/ – STEP or STL files representing the geometry of the welding cell and robot
+---
 
-Features
+## 🚀 Key Features
 
-Kinematic Modeling:
+- Forward & Inverse Kinematics using DH Parameters
+- Path Planning using Potential Fields
+- Jacobian-based Differential Kinematics
+- Dynamic Modeling with Euler-Lagrange Equations
+- Inverse Dynamics Control for Trajectory Tracking
+- Obstacle avoidance with smooth path optimization
+- Simulation using `ode45` for torque and trajectory validation
 
-Forward and inverse kinematics implemented in MATLAB
+---
 
-Jacobian calculation for velocity analysis
+## 📸 CAD & Simulation
 
-Path Planning:
+- Includes STL/STEP files for spatial modeling
+- Simulated weld sequence execution with obstacle interaction
+- Path smoothing, velocity control, and torque estimation
 
-Potential Field algorithm for obstacle avoidance
+---
 
-Visualization of weld point transitions
+## 🧠 Future Extensions
 
-Dynamics & Control:
+- Integrate Reinforcement Learning for adaptive planning
+- Convert symbolic dynamics to C for embedded control
+- Add ROS/Gazebo support for hardware-in-the-loop testing
+- Create a Digital Twin for real-time feedback and diagnostics
 
-Euler-Lagrange formulation for dynamic equations
+---
 
-Inverse dynamics control with trajectory simulation via ODE45
+## 📄 License
 
-Validation:
+This project is shared for academic and demonstration purposes. Please contact the author for any reuse or extension.
 
-Code verification through inverse-forward loop
+---
 
-Trajectory validation plots for torque and position
-
-Tools Used
-
-MATLAB R2024a
-
-Symbolic and Optimization Toolbox
-
-Simulink (for validation and simulation)
-
-Author
-
-Sannjay BalajiECE 9053A - Robotics and ControlWestern University, Fall 2024
